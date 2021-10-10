@@ -1,0 +1,33 @@
+.user-info {
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: #f8f8f7;
+    cursor: default;
+    transition: background-color 300ms;
+    column-gap: 20px;
+}
+
+.user-info:not(.user-info:last-child) {
+    margin-bottom: 10px;
+}
+
+.user-info:hover {
+    background: #dfdfde;
+}
+
+.user-info__photo {
+    width: 72px;
+    height: 72px;
+}
+
+.user-info__photo img {
+    max-width: 100%;
+    border-radius: 15px;
+    object-fit: contain;
+}
+
+.user-info__description {
+    color: #1d1d1d;
+    font: 500 2rem/7.2rem 'Jost', sans-serif;
+}

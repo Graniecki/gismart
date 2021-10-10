@@ -1,0 +1,72 @@
+.user-section {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+}
+
+.user-section__button,
+.user-section__form button {
+    display: block;
+    width: 138px;
+    height: 36px;
+    margin: 0 auto 20px;
+    border: 1px solid #ff868e;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #ff868e;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font: 500 1.2rem/1.6rem 'Jost', sans-serif;
+    cursor: pointer;
+    transition: background-color 300ms, color 300ms, border 300ms;
+}
+
+.user-section__button:hover {
+    background-color: #ff868e;
+    color: #ffffff;
+}
+
+.user-section__form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    row-gap: 10px;
+}
+
+.user-section__form input,
+.user-section__form select {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8f8f7;
+    color: #1d1d1d;
+    font: 400 1.6rem/2.4rem 'Jost', sans-serif;
+}
+
+.user-section__form input::placeholder{
+    color: #8c8c8c;
+    font: 400 1.6rem/2.4rem 'Jost', sans-serif;
+}
+
+.user-section__form select {
+    background: #f8f8f7 url('../../assets/arrow-down.svg') no-repeat center right 10px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.user-section__form button {
+    margin: 0 auto;
+    background-color: #ff868e;
+    color: #ffffff;
+}
+
+.user-section__form button:hover {
+    border-color: #fbe0dc;
+    background-color: #fbe0dc;
+    color: #ff868e;
+}
