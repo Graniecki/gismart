@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.2e6c9bc2.chunk.css",
-    "main.js": "/my-app/static/js/main.157f9903.chunk.js",
-    "main.js.map": "/my-app/static/js/main.157f9903.chunk.js.map",
-    "runtime-main.js": "/my-app/static/js/runtime-main.1dcebb58.js",
-    "runtime-main.js.map": "/my-app/static/js/runtime-main.1dcebb58.js.map",
-    "static/js/2.6b547528.chunk.js": "/my-app/static/js/2.6b547528.chunk.js",
-    "static/js/2.6b547528.chunk.js.map": "/my-app/static/js/2.6b547528.chunk.js.map",
-    "index.html": "/my-app/index.html",
-    "static/css/main.2e6c9bc2.chunk.css.map": "/my-app/static/css/main.2e6c9bc2.chunk.css.map",
-    "static/js/2.6b547528.chunk.js.LICENSE.txt": "/my-app/static/js/2.6b547528.chunk.js.LICENSE.txt",
-    "static/media/UserSection.css": "/my-app/static/media/arrow-down.47f78b4b.svg"
+    "main.css": "/gismart/static/css/main.af572366.chunk.css",
+    "main.js": "/gismart/static/js/main.157f9903.chunk.js",
+    "main.js.map": "/gismart/static/js/main.157f9903.chunk.js.map",
+    "runtime-main.js": "/gismart/static/js/runtime-main.a3b91d40.js",
+    "runtime-main.js.map": "/gismart/static/js/runtime-main.a3b91d40.js.map",
+    "static/js/2.6b547528.chunk.js": "/gismart/static/js/2.6b547528.chunk.js",
+    "static/js/2.6b547528.chunk.js.map": "/gismart/static/js/2.6b547528.chunk.js.map",
+    "index.html": "/gismart/index.html",
+    "static/css/main.af572366.chunk.css.map": "/gismart/static/css/main.af572366.chunk.css.map",
+    "static/js/2.6b547528.chunk.js.LICENSE.txt": "/gismart/static/js/2.6b547528.chunk.js.LICENSE.txt",
+    "static/media/UserSection.css": "/gismart/static/media/arrow-down.47f78b4b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1dcebb58.js",
+    "static/js/runtime-main.a3b91d40.js",
     "static/js/2.6b547528.chunk.js",
-    "static/css/main.2e6c9bc2.chunk.css",
+    "static/css/main.af572366.chunk.css",
     "static/js/main.157f9903.chunk.js"
   ]
 }
