@@ -1,6 +1,6 @@
 {
+  "homepage": "http://Graniecki.github.io",
   "name": "my-app",
-  "homepage": "https://Graniecki.github.io/gismart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
