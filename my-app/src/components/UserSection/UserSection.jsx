@@ -1,20 +1,37 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import classNames from 'classnames';
 
 import './UserSection.css';
 
-const UserSection = ({ addNewUser }) => {
+const UserSection = ({ addNewUser, activatePopup }) => {
   const url = 'https://dummyapi.io/data/v1/user/create';
-  const [formOpen, setFormOpen] = useState(true);
+  const [formOpen, setFormOpen] = useState(false);
   const [title, setTitle] = useState('');
+  const [avatar, setAvatar] = useState('');
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
-  const [avatar, setAvatar] = useState('');
+  const [emailValid, setEmailValid] = useState(true);
+  const nameRef = useRef(null);
+  const surnameRef = useRef(null);
+  const emailRef = useRef(null);
   const userInfo = {
     firstName: name,
     lastName: surname,
     email,
     picture: avatar
+  };
+
+  const handleFormField = (event, callback, ref) => {
+    const { value } = event.target;
+
+    callback(value);
+
+    if (!ref) return;
+
+    value
+      ? ref.current.classList.remove('danger')
+      : ref.current.classList.add('danger');
   };
 
   const clearForm = () => {
@@ -23,6 +40,22 @@ const UserSection = ({ addNewUser }) => {
     setSurname('');
     setEmail('');
     setAvatar('');
+  };
+
+  const fieldValidation = () => {
+    name
+      ? nameRef.current.classList.remove('danger')
+      : nameRef.current.classList.add('danger');
+
+    surname
+      ? surnameRef.current.classList.remove('danger')
+      : surnameRef.current.classList.add('danger');
+
+    email
+      ? emailRef.current.classList.remove('danger')
+      : emailRef.current.classList.add('danger');
+
+    setEmailValid(email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i));
   };
 
   const createUser = async () => {
@@ -39,19 +72,25 @@ const UserSection = ({ addNewUser }) => {
       .then(res => res.json());
 
       if (newUser.error) {
-        alert('Error');
+        activatePopup('error');
 
         return;
       }
 
-      alert('Succes');
+      activatePopup('success');
       addNewUser(newUser);
   };
 
   const addUser = (event) => {
+    const validation = email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+
     event.preventDefault();
-    clearForm();
+    fieldValidation();
+
+    if (!name || !surname || !email || !validation) return;
+
     createUser();
+    clearForm();
     setFormOpen(false)
   };
 
@@ -72,7 +111,7 @@ const UserSection = ({ addNewUser }) => {
         <select
           name="title"
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(event) => handleFormField(event, setTitle)}
         >
           <option value="">Choose a title</option>
           <option value="mr">mr</option>
@@ -81,33 +120,44 @@ const UserSection = ({ addNewUser }) => {
           <option value="miss">miss</option>
           <option value="dr">dr</option>
         </select>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          placeholder="First name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="text"
-          name="surname"
-          value={surname}
-          placeholder="Last name"
-          onChange={(e) => setSurname(e.target.value)}
-        />
-        <input
-          type="text"
-          name="email"
-          value={email}
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <div className="field-wrapper" ref={nameRef}>
+          <input
+            type="text"
+            name="name"
+            value={name}
+            placeholder="First name"
+            onChange={(event) => handleFormField(event, setName, nameRef)}
+          />
+        </div>
+        <div className="field-wrapper" ref={surnameRef}>
+          <input
+            type="text"
+            name="surname"
+            value={surname}
+            placeholder="Last name"
+            onChange={(event) => handleFormField(event, setSurname, surnameRef)}
+          />
+        </div>
+        <div
+          ref={emailRef}
+          className={classNames("field-wrapper", {
+            "email-error": !emailValid
+          })}
+        >
+          <input
+            type="text"
+            name="email"
+            value={email}
+            placeholder="Email"
+            onChange={(event) => handleFormField(event, setEmail, emailRef)}
+          />
+        </div>
         <input
           type="text"
           name="avatar"
           value={avatar}
           placeholder="Avatar URL"
-          onChange={(e) => setAvatar(e.target.value)}
+          onChange={(event) => handleFormField(event, setAvatar)}
         />
         <button>Add user</button>
       </form>

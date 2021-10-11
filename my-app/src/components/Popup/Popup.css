@@ -1,0 +1,46 @@
+.pop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font: 500 7rem/100% 'Jost', sans-serif;
+    transform: translate(-50%, -50%);
+    animation: faded 5s forwards;
+}
+
+.pop-up.success {
+    background: rgba(34, 187, 52, 0.2);
+}
+
+.pop-up.error {
+    background: rgba(214, 43, 123, 0.2);
+}
+
+@keyframes faded {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .pop-up {
+        max-width: 80%;
+        height: 200px;
+        font-size: 5rem;
+    }
+}

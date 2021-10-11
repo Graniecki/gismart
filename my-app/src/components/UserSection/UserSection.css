@@ -46,7 +46,12 @@
     font: 400 1.6rem/2.4rem 'Jost', sans-serif;
 }
 
-.user-section__form input::placeholder{
+.user-section__form input:focus,
+.user-section__form select:focus {
+    outline: none;
+}
+
+.user-section__form input::placeholder {
     color: #8c8c8c;
     font: 400 1.6rem/2.4rem 'Jost', sans-serif;
 }
@@ -69,4 +74,57 @@
     border-color: #fbe0dc;
     background-color: #fbe0dc;
     color: #ff868e;
+}
+
+.field-wrapper {
+    position: relative;
+    border-radius: 10px;
+}
+
+.field-wrapper.danger,
+.field-wrapper.email-error {
+    border: 1px solid red;
+}
+
+.field-wrapper.danger::after,
+.field-wrapper.email-error::after {
+    content: 'This field is required';
+    position: absolute;
+    bottom: -12px;
+    left: 8px;
+    display: block;
+    color: red;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+}
+
+.field-wrapper.email-error::after {
+    content: 'Email is not valid';
+}
+
+.field-wrapper input {
+    width: 100%;
+}
+
+@media all and (max-width: 768px) {
+    .user-section {
+        position: relative;
+        max-width: 300px;
+        margin: 0 auto 20px;
+        padding: 0;
+    }
+
+    .users-list {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .user-section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .user-section__form {
+        width: 100%;
+    }
 }
