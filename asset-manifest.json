@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/gismart/static/css/main.af572366.chunk.css",
-    "main.js": "/gismart/static/js/main.157f9903.chunk.js",
-    "main.js.map": "/gismart/static/js/main.157f9903.chunk.js.map",
-    "runtime-main.js": "/gismart/static/js/runtime-main.a3b91d40.js",
-    "runtime-main.js.map": "/gismart/static/js/runtime-main.a3b91d40.js.map",
-    "static/js/2.6b547528.chunk.js": "/gismart/static/js/2.6b547528.chunk.js",
-    "static/js/2.6b547528.chunk.js.map": "/gismart/static/js/2.6b547528.chunk.js.map",
-    "index.html": "/gismart/index.html",
-    "static/css/main.af572366.chunk.css.map": "/gismart/static/css/main.af572366.chunk.css.map",
-    "static/js/2.6b547528.chunk.js.LICENSE.txt": "/gismart/static/js/2.6b547528.chunk.js.LICENSE.txt",
-    "static/media/UserSection.css": "/gismart/static/media/arrow-down.47f78b4b.svg"
+    "main.css": "/static/css/main.bd3b10a8.chunk.css",
+    "main.js": "/static/js/main.157f9903.chunk.js",
+    "main.js.map": "/static/js/main.157f9903.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c2e8e232.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c2e8e232.js.map",
+    "static/js/2.6b547528.chunk.js": "/static/js/2.6b547528.chunk.js",
+    "static/js/2.6b547528.chunk.js.map": "/static/js/2.6b547528.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.bd3b10a8.chunk.css.map": "/static/css/main.bd3b10a8.chunk.css.map",
+    "static/js/2.6b547528.chunk.js.LICENSE.txt": "/static/js/2.6b547528.chunk.js.LICENSE.txt",
+    "static/media/UserSection.css": "/static/media/arrow-down.47f78b4b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a3b91d40.js",
+    "static/js/runtime-main.c2e8e232.js",
     "static/js/2.6b547528.chunk.js",
-    "static/css/main.af572366.chunk.css",
+    "static/css/main.bd3b10a8.chunk.css",
     "static/js/main.157f9903.chunk.js"
   ]
 }
